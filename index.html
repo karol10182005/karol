@@ -104,5 +104,29 @@ button:hover {
   </h2>
     <a href="karol-2.html"><button >¿carrera?</button></a>
   </div>
+  <div class="montanas"></div>
+
+  <style>
+    .montanas {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 220px;
+      background: #569b4a;
+      clip-path: polygon(
+        0% 100%, 0% 55%, 10% 65%, 20% 50%, 30% 70%, 40% 55%,
+        50% 75%, 60% 60%, 70% 80%, 80% 65%, 90% 85%, 100% 70%,
+        100% 100%
+      );
+      animation: moverMontanas 60s linear infinite;
+      z-index: 5;
+    }
+
+    @keyframes moverMontanas {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  </style>
 </body>
 </html>
