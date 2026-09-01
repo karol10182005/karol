@@ -1,0 +1,71 @@
+# ==========================================
+# WINDOWS
+# ==========================================
+
+# Archivos del sistema
+Thumbs.db
+Desktop.ini
+
+
+# ==========================================
+# VISUAL STUDIO CODE
+# ==========================================
+
+# Configuración personal de VS Code
+.vscode/
+
+# Historial de VS Code
+.history/
+
+
+# ==========================================
+# ARCHIVOS TEMPORALES
+# ==========================================
+
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+
+
+# ==========================================
+# VARIABLES DE ENTORNO
+# ==========================================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+# ==========================================
+# DEPENDENCIAS
+# ==========================================
+
+node_modules/
+
+
+# ==========================================
+# ARCHIVOS COMPILADOS
+# ==========================================
+
+*.exe
+*.dll
+*.obj
+*.o
+*.class
+*.out
+
+
+# ==========================================
+# CARPETAS GENERADAS
+# ==========================================
+
+bin/
+obj/
+build/
+dist/
+coverage/
