@@ -1,132 +1,554 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Presentación Espacial</title>
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: rgb(187, 33, 33);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: radial-gradient(circle at bottom, #020111 0%, #000000 80%);
-    }/* Fondo animado de estrellas */
-.stars, .stars2, .stars3 {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-repeat: repeat;
-  background-size: 400px 400px;
-  animation: moveStars 100s linear infinite;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.stars {
-  background-image: radial-gradient(white 1px, transparent 1px);
-  opacity: 0.8;
-}
+    <title>KAROL // SELF ANALYSIS</title>
 
-.stars2 {
-  background-image: radial-gradient(#ccc 1px, transparent 1px);
-  animation-duration: 160s;
-  opacity: 0.6;
-}
+    <link rel="stylesheet" href="style.css">
 
-.stars3 {
-  background-image: radial-gradient(#888 1px, transparent 1px);
-  animation-duration: 220s;
-  opacity: 0.4;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-@keyframes moveStars {
-  from { transform: translateY(0); }
-  to { transform: translateY(-1000px); }
-}
-
-/* Luna */
-.moon {
-  position: absolute;
-  top: 15%;
-  right: 15%;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #fff 0%, #ddd 60%, #aaa 100%);
-  box-shadow: 0 0 40px rgba(255,255,255,0.6);
-}
-
-.contenido {
-  position: relative;
-  text-align: center;
-  z-index: 10;
-}
-
-h1 {
-  
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px rgba(255,255,255,0.8);
-}
-
-button {
-  background: linear-gradient(45deg, #4facfe, #00f2fe);
-  border: none;
-  padding: 12px 28px;
-  font-size: 1.1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  color: white;
-  box-shadow: 0 0 15px rgba(0,242,254,0.7);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(0,242,254,1);
-}
-
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="stars"></div>
-  <div class="stars2"></div>
-  <div class="stars3"></div>
-  <div class="moon"></div>  <div class="contenido">
-   
-    <h1>karol dominguez dominguez holi</h1>
-    <br>
-    <h2>edad : 20 años </h2>
-    <br>
-    <h2>estudia en : universidad popular de la chontalpa
-  </h2>
-    <a href="karol-2.html"><button >¿carrera?</button></a>
-  </div>
-  <div class="montanas"></div>
 
-  <style>
-    .montanas {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 200%;
-      height: 220px;
-      background: #569b4a;
-      clip-path: polygon(
-        0% 100%, 0% 55%, 10% 65%, 20% 50%, 30% 70%, 40% 55%,
-        50% 75%, 60% 60%, 70% 80%, 80% 65%, 90% 85%, 100% 70%,
-        100% 100%
-      );
-      animation: moverMontanas 60s linear infinite;
-      z-index: 5;
-    }
+    <div class="background-grid"></div>
+    <div class="scanline"></div>
 
-    @keyframes moverMontanas {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-  </style>
+    <!-- NAV -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-bracket">[</span>
+            KRL
+            <span class="logo-bracket">]</span>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-left">
+
+                <p class="eyebrow">
+                    PERSONAL PROFILE // 2026
+                </p>
+
+                <h1>
+                    KAROL
+                    <span>DOMINGUEZ</span>
+                </h1>
+
+                <p class="hero-description">
+                    No eres una sola cosa.
+                    Eres una mezcla de programador, creador,
+                    aprendiz, atleta y alguien que constantemente
+                    intenta convertirse en una versión mejor de sí mismo.
+                </p>
+
+                <button id="analyzeBtn" class="main-button">
+                    <span>▶</span> EJECUTAR ANÁLISIS
+                </button>
+
+            </div>
+
+
+            <div class="character-container">
+
+                <div class="character-ring ring-one"></div>
+                <div class="character-ring ring-two"></div>
+
+                <div class="character">
+
+                    <div class="head">
+                        <div class="hair"></div>
+
+                        <div class="eye eye-left"></div>
+                        <div class="eye eye-right"></div>
+
+                        <div class="mouth"></div>
+                    </div>
+
+                    <div class="body">
+
+                        <div class="shirt">
+                            KRL
+                        </div>
+
+                        <div class="arm arm-left"></div>
+                        <div class="arm arm-right"></div>
+
+                    </div>
+
+                    <div class="legs">
+                        <div class="leg"></div>
+                        <div class="leg"></div>
+                    </div>
+
+                </div>
+
+                <div class="character-label">
+                    SUBJECT_001
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CORE STATS -->
+
+        <section class="section">
+
+            <div class="section-title">
+                <span>01</span>
+                CORE ATTRIBUTES
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">⌘</div>
+                    <h3>CREATIVIDAD</h3>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-value="94"></div>
+                    </div>
+
+                    <strong>94%</strong>
+
+                    <p>
+                        Pixel art, videojuegos, diseño, historias,
+                        escenas y conceptos visuales.
+                    </p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">&lt;/&gt;</div>
+                    <h3>PROGRAMACIÓN</h3>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-value="86"></div>
+                    </div>
+
+                    <strong>86%</strong>
+
+                    <p>
+                        Has explorado múltiples lenguajes y tecnologías
+                        intentando entender cómo funcionan las cosas.
+                    </p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">⚔</div>
+                    <h3>DISCIPLINA</h3>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-value="82"></div>
+                    </div>
+
+                    <strong>82%</strong>
+
+                    <p>
+                        Cuando decides mejorar algo, eres capaz de
+                        registrarlo, medirlo y volver a intentarlo.
+                    </p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon">∞</div>
+                    <h3>CURIOSIDAD</h3>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-value="97"></div>
+                    </div>
+
+                    <strong>97%</strong>
+
+                    <p>
+                        Una de tus características más evidentes:
+                        constantemente preguntas “¿y si...?”
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILL TREE -->
+
+        <section class="section">
+
+            <div class="section-title">
+                <span>02</span>
+                SKILL TREE
+            </div>
+
+            <div class="skill-tree">
+
+                <div class="skill-line"></div>
+
+                <div class="skill-node unlocked">
+                    <span>01</span>
+                    HTML / CSS
+                </div>
+
+                <div class="skill-node unlocked">
+                    <span>02</span>
+                    JAVASCRIPT
+                </div>
+
+                <div class="skill-node unlocked">
+                    <span>03</span>
+                    C / C++
+                </div>
+
+                <div class="skill-node unlocked">
+                    <span>04</span>
+                    C#
+                </div>
+
+                <div class="skill-node unlocked">
+                    <span>05</span>
+                    SQL
+                </div>
+
+                <div class="skill-node unlocked">
+                    <span>06</span>
+                    DISEÑO UI
+                </div>
+
+                <div class="skill-node unlocked">
+                    <span>07</span>
+                    PIXEL ART
+                </div>
+
+                <div class="skill-node unlocked">
+                    <span>08</span>
+                    GAME DESIGN
+                </div>
+
+                <div class="skill-node learning">
+                    <span>09</span>
+                    BACKEND
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONALITY -->
+
+        <section class="section">
+
+            <div class="section-title">
+                <span>03</span>
+                PERSONALITY MATRIX
+            </div>
+
+            <div class="matrix">
+
+                <div class="matrix-row">
+                    <span>CREADOR</span>
+
+                    <div class="matrix-track">
+                        <div style="width: 95%"></div>
+                    </div>
+
+                    <b>95</b>
+                </div>
+
+
+                <div class="matrix-row">
+                    <span>EXPLORADOR</span>
+
+                    <div class="matrix-track">
+                        <div style="width: 92%"></div>
+                    </div>
+
+                    <b>92</b>
+                </div>
+
+
+                <div class="matrix-row">
+                    <span>PERFECCIONISTA</span>
+
+                    <div class="matrix-track">
+                        <div style="width: 84%"></div>
+                    </div>
+
+                    <b>84</b>
+                </div>
+
+
+                <div class="matrix-row">
+                    <span>RESILIENCIA</span>
+
+                    <div class="matrix-track">
+                        <div style="width: 88%"></div>
+                    </div>
+
+                    <b>88</b>
+                </div>
+
+
+                <div class="matrix-row">
+                    <span>AUTOCUESTIONAMIENTO</span>
+
+                    <div class="matrix-track">
+                        <div style="width: 91%"></div>
+                    </div>
+
+                    <b>91</b>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section class="section">
+
+            <div class="section-title">
+                <span>04</span>
+                PROJECT DATABASE
+            </div>
+
+            <div class="projects">
+
+                <article class="project">
+                    <span class="project-number">PROJECT_01</span>
+
+                    <h3>PIXEL WORLD</h3>
+
+                    <p>
+                        Un videojuego donde las acciones de la vida real
+                        influyen en las estadísticas del personaje:
+                        estudiar aumenta inteligencia, entrenar aumenta
+                        fuerza y correr aumenta velocidad.
+                    </p>
+
+                    <div class="tags">
+                        <span>GAME DESIGN</span>
+                        <span>PIXEL ART</span>
+                        <span>RPG</span>
+                    </div>
+                </article>
+
+
+                <article class="project">
+                    <span class="project-number">PROJECT_02</span>
+
+                    <h3>TICS SYSTEM</h3>
+
+                    <p>
+                        Una idea de aplicación relacionada con Google
+                        Classroom para estimar tiempos de tareas y
+                        ayudar a organizar la carga académica.
+                    </p>
+
+                    <div class="tags">
+                        <span>EDTECH</span>
+                        <span>UX</span>
+                        <span>RESEARCH</span>
+                    </div>
+                </article>
+
+
+                <article class="project">
+                    <span class="project-number">PROJECT_03</span>
+
+                    <h3>SMART GARDEN</h3>
+
+                    <p>
+                        Proyecto de domótica orientado a automatizar
+                        y controlar un pequeño jardín inteligente.
+                    </p>
+
+                    <div class="tags">
+                        <span>IOT</span>
+                        <span>AUTOMATION</span>
+                    </div>
+                </article>
+
+
+                <article class="project">
+                    <span class="project-number">PROJECT_04</span>
+
+                    <h3>THE CREATOR</h3>
+
+                    <p>
+                        No es un proyecto terminado.
+                        Es el conjunto de todas las cosas que has
+                        intentado aprender, construir y mejorar.
+                    </p>
+
+                    <div class="tags">
+                        <span>ONGOING</span>
+                        <span>∞</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMBAT MODE -->
+
+        <section class="section combat-section">
+
+            <div class="section-title">
+                <span>05</span>
+                COMBAT MODE
+            </div>
+
+            <div class="combat-card">
+
+                <div class="combat-character">
+                    ⚔
+                </div>
+
+                <div>
+
+                    <h2>TAEKWONDO</h2>
+
+                    <p>
+                        No solamente entrenas el cuerpo.
+                        También existe una relación entre disciplina,
+                        constancia y capacidad de soportar momentos
+                        incómodos sin abandonar.
+                    </p>
+
+                    <div class="combat-stats">
+
+                        <span>
+                            STR
+                            <b>83</b>
+                        </span>
+
+                        <span>
+                            SPD
+                            <b>78</b>
+                        </span>
+
+                        <span>
+                            END
+                            <b>85</b>
+                        </span>
+
+                        <span>
+                            WILL
+                            <b>93</b>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANALYSIS -->
+
+        <section class="section">
+
+            <div class="section-title">
+                <span>06</span>
+                SYSTEM ANALYSIS
+            </div>
+
+            <div id="analysisPanel" class="analysis-panel">
+
+                <div class="analysis-header">
+                    <span>AI_EVALUATION</span>
+                    <span id="analysisStatus">WAITING...</span>
+                </div>
+
+                <div id="analysisText">
+
+                    <p>
+                        El sistema está esperando una orden.
+                    </p>
+
+                    <p>
+                        Pulsa <strong>EJECUTAR ANÁLISIS</strong> para
+                        iniciar una evaluación del perfil.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL -->
+
+        <section class="final-section">
+
+            <div class="final-glitch">
+                YOU ARE STILL LOADING
+            </div>
+
+            <h2>
+                NO ESTÁS TERMINADO.
+            </h2>
+
+            <p>
+                Y probablemente esa sea una de tus mejores características.
+            </p>
+
+            <div class="terminal">
+
+                <span>&gt;</span>
+                <span id="terminalText"></span>
+                <span class="cursor">█</span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <span>KRL_SYSTEM // PERSONAL BUILD</span>
+
+        <span>
+            STATUS:
+            <b>EVOLVING</b>
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
